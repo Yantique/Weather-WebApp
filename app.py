@@ -22,10 +22,6 @@ class City(db.Model):
     name = db.Column(db.String(60), unique=True, nullable=False)
 
 
-db.drop_all()
-db.create_all()
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
